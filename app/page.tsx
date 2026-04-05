@@ -269,7 +269,7 @@ I respond within 4-8 hours. Send me your project details.`;
         <motion.section
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.05 }}
           variants={stagger}
           className="py-24"
         >
@@ -334,7 +334,7 @@ I respond within 4-8 hours. Send me your project details.`;
           id="audit"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.05 }}
           variants={stagger}
           className="py-24"
         >
@@ -423,7 +423,7 @@ I respond within 4-8 hours. Send me your project details.`;
           id="algorithm"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.05 }}
           variants={stagger}
           className="py-24"
         >
@@ -561,7 +561,7 @@ I respond within 4-8 hours. Send me your project details.`;
           id="market"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.05 }}
           variants={stagger}
           className="py-24"
         >
@@ -663,7 +663,7 @@ I respond within 4-8 hours. Send me your project details.`;
           id="niche"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.05 }}
           variants={stagger}
           className="py-24"
         >
@@ -735,7 +735,7 @@ I respond within 4-8 hours. Send me your project details.`;
           id="competition"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.05 }}
           variants={stagger}
           className="py-24"
         >
@@ -809,7 +809,7 @@ I respond within 4-8 hours. Send me your project details.`;
           id="portfolio"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.05 }}
           variants={stagger}
           className="py-24"
         >
@@ -870,7 +870,7 @@ I respond within 4-8 hours. Send me your project details.`;
           id="profile"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.05 }}
           variants={stagger}
           className="py-24"
         >
@@ -971,7 +971,7 @@ I respond within 4-8 hours. Send me your project details.`;
           id="action"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.05 }}
           variants={stagger}
           className="py-24"
         >
@@ -1045,7 +1045,7 @@ I respond within 4-8 hours. Send me your project details.`;
           id="keywords"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.05 }}
           variants={stagger}
           className="py-24"
         >
