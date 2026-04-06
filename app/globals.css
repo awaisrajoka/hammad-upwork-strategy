@@ -1,8 +1,14 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #0a0b0f;
-  --color-foreground: #ffffff;
+  --color-background: #ffffff;
+  --color-foreground: #1e293b;
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-500: #3b82f6;
+  --color-brand-600: #2563eb;
+  --color-brand-700: #1d4ed8;
+  --color-brand-800: #1e40af;
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
@@ -13,35 +19,58 @@
   box-sizing: border-box;
 }
 
-/* scroll-behavior handled by JS scrollIntoView */
-
 body {
-  background: #0a0b0f;
-  color: #ffffff;
+  background: #ffffff;
+  color: #1e293b;
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Scroll reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children */
+.reveal-stagger > .reveal:nth-child(1) { transition-delay: 0ms; }
+.reveal-stagger > .reveal:nth-child(2) { transition-delay: 70ms; }
+.reveal-stagger > .reveal:nth-child(3) { transition-delay: 140ms; }
+.reveal-stagger > .reveal:nth-child(4) { transition-delay: 210ms; }
+.reveal-stagger > .reveal:nth-child(5) { transition-delay: 280ms; }
+.reveal-stagger > .reveal:nth-child(6) { transition-delay: 350ms; }
+.reveal-stagger > .reveal:nth-child(7) { transition-delay: 420ms; }
+.reveal-stagger > .reveal:nth-child(8) { transition-delay: 490ms; }
+
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0b0f;
+  background: #f8fafc;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.08);
+  background: #cbd5e1;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: #94a3b8;
 }
 
 ::selection {
-  background: rgba(99, 102, 241, 0.3);
+  background: rgba(29, 78, 216, 0.15);
+  color: #1e293b;
 }
 
 /* Horizontal scroll for tables on mobile */
@@ -54,6 +83,33 @@ body {
 }
 
 .table-scroll::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
+  background: #cbd5e1;
   border-radius: 2px;
+}
+
+/* Card hover */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(29, 78, 216, 0.08);
+}
+
+/* Gradient border card */
+.gradient-border-card {
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(135deg, #93c5fd, #818cf8) border-box;
+  border: 2px solid transparent;
+}
+
+/* Nav shadow on scroll */
+.nav-scrolled {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+/* Progress bar animation */
+.progress-fill {
+  transition: width 0.7s ease;
 }
