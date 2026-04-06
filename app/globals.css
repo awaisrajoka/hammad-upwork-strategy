@@ -13,9 +13,7 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+/* scroll-behavior handled by JS scrollIntoView */
 
 body {
   background: #0a0b0f;
